@@ -152,6 +152,22 @@ blockquote { margin: 0; font-family: var(--display); font-style: italic; font-si
 .place .side { display: grid; gap: 12px; justify-items: stretch; text-align: center; }
 .place .side small { color: var(--gold); letter-spacing: .04em; }
 
+/* Investimento */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+.invest .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+.invest header { display: grid; gap: 18px; }
+.invest header p.sub { color: var(--muted); max-width: 40ch; }
+.price-card { background: var(--card); border-radius: 24px; padding: clamp(28px, 4vw, 44px); box-shadow: 0 18px 40px rgba(58, 29, 25, .12); border-top: 4px solid var(--gold); display: grid; gap: 22px; min-width: 0; }
+.price-card .value { display: grid; gap: 4px; }
+.price-card .value b { font-family: var(--display); font-weight: 600; font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1; color: var(--title); font-variant-numeric: lining-nums; }
+.price-card .value span { color: var(--muted); font-size: 1.05rem; }
+.price-card ul { list-style: none; padding: 0; border-top: 1px solid var(--line); }
+.price-card li { display: flex; gap: 14px; align-items: baseline; padding-block: 12px; border-bottom: 1px solid var(--line); }
+.price-card li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); transform: translateY(-2px); }
+.price-card .btn { justify-self: start; }
+.price-card small { color: var(--muted); }
+
 /* FAQ */
 .faq .wrap { display: grid; gap: 28px; max-width: 820px; }
 details { border-bottom: 1px solid var(--line); padding-block: 20px; }
@@ -167,7 +183,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 footer a { color: inherit; }
 
 @media (max-width: 860px) {
-  .hero-body .wrap, .pain .wrap, .gains .wrap, .guide .wrap, .place .wine .wrap { grid-template-columns: 1fr; }
+  .hero-body .wrap, .invest .wrap, .pain .wrap, .gains .wrap, .guide .wrap, .place .wine .wrap { grid-template-columns: 1fr; }
   .hero-body .wrap { margin-top: -40px; gap: 36px; }
   .hero-text { padding-top: 0; }
   .hero .arch { justify-self: start; max-width: 200px; order: -1; }
@@ -201,7 +217,7 @@ footer a { color: inherit; }
           <div class="rule"></div>
           <p class="base"><b>Ayurveda como base:</b> corpo forte, energia desperta, conexão profunda. Tantra não é técnica. É presença.</p>
           <div class="actions">
-            <a class="btn" href="https://wa.me/5548991651080?text=Ol%C3%A1%2C%20Edu!%20Quero%20receber%20valores%20e%20agenda%20da%20Mentoria%20Tantra%20para%20Casais." target="_blank" rel="noopener">Quero receber valores e agenda <span aria-hidden="true">→</span></a>
+            <a class="btn" href="#investimento">Quero participar <span aria-hidden="true">→</span></a>
             <span class="note">Vagas limitadas</span>
           </div>
         </div>
@@ -311,9 +327,34 @@ footer a { color: inherit; }
           <p class="sub">Florianópolis · SC. Ou de onde vocês estiverem, online.</p>
         </div>
         <div class="side">
-          <a class="btn cream" href="https://wa.me/5548991651080?text=Ol%C3%A1%2C%20Edu!%20Quero%20receber%20valores%20e%20agenda%20da%20Mentoria%20Tantra%20para%20Casais." target="_blank" rel="noopener">Vagas limitadas · Quero participar</a>
-          <small>Valores e agenda pelo WhatsApp (48) 99165-1080</small>
+          <a class="btn cream" href="https://wa.me/5548991651080?text=Ol%C3%A1%2C%20Edu!%20Quero%20participar%20da%20Mentoria%20Tantra%20para%20Casais." target="_blank" rel="noopener">Vagas limitadas · Quero participar</a>
+          <small>Agenda pelo WhatsApp (48) 99165-1080</small>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="invest" id="investimento">
+    <div class="wrap">
+      <header>
+        <p class="eyebrow">Investimento</p>
+        <h2>Uma jornada a dois, do corpo ao encontro.</h2>
+        <div class="rule"></div>
+        <p class="sub">Um valor único por casal, com o mesmo cuidado no presencial e no online.</p>
+      </header>
+      <div class="price-card">
+        <div class="value">
+          <b>R$ 6.970</b>
+          <span>por casal · em até 6x</span>
+        </div>
+        <ul>
+          <li>2 encontros individuais para cada um</li>
+          <li>3 encontros do casal, com as dinâmicas do Tantra</li>
+          <li>Cerca de 45 dias de jornada</li>
+          <li>Presencial na Casa da Montanha ou online, mesmo valor</li>
+        </ul>
+        <a class="btn" href="https://wa.me/5548991651080?text=Ol%C3%A1%2C%20Edu!%20Quero%20participar%20da%20Mentoria%20Tantra%20para%20Casais." target="_blank" rel="noopener">Quero garantir nossa vaga <span aria-hidden="true">→</span></a>
+        <small>Vagas limitadas · agenda combinada pelo WhatsApp</small>
       </div>
     </div>
   </section>
@@ -336,7 +377,7 @@ footer a { color: inherit; }
         </details>
         <details>
           <summary>Qual é o valor e quando começa a próxima turma?</summary>
-          <p>Valores e agenda são enviados pelo WhatsApp (48) 99165-1080. As vagas são limitadas.</p>
+          <p>R$ 6.970 por casal, em até 6x. O valor é o mesmo no presencial e no online. A agenda da próxima turma é combinada pelo WhatsApp (48) 99165-1080. As vagas são limitadas.</p>
         </details>
       </div>
     </div>
